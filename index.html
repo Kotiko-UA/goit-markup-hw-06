@@ -634,14 +634,20 @@
               type="checkbox"
               name="privat"
               id="privat"
-              class="modal-input-privat"
+              value="true"
+              class="modal-input-privat visually-hidden"
             />
-            <label for="privat" class="modal-label"
-              >I accept the terms and conditions of the
+            <label for="privat" class="modal-label-privat">
+              <span>
+                <svg class="modal-icon-check" width="10" height="8">
+                  <use href="./images/icons.svg#icon-check"></use>
+                </svg>
+              </span>
+              I accept the terms and conditions of the
               <a class="privat-link" rel="noopener nofollow noreferrer" href=""
                 >Privacy Policy</a
-              ></label
-            >
+              >
+            </label>
           </div>
           <button class="modal-button" type="submit">Send</button>
         </form>

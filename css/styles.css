@@ -48,6 +48,20 @@ address {
     font-style: normal;
 }
 
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
+
 .container {
     width: 1158px;
     padding-left: 15px;
@@ -938,4 +952,35 @@ address {
 .modal-button:hover,
 .modal-button:focus {
     background-color: var(--pressed-state);
+}
+
+.modal-label-privat {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    flex-wrap: wrap;
+
+}
+
+.modal-label-privat span {
+    width: 16px;
+    height: 16px;
+    border: 1px solid var(--title-dark);
+    border-radius: 2px;
+    fill: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: fill var(--tranform), background-color var(--tranform), border-color var(--tranform);
+}
+
+.modal-input-privat:checked+.modal-label-privat span {
+    fill: #FFF;
+    background-color: var(--pressed-state);
+    border: 1px solid var(--pressed-state);
+    border-radius: 2px;
+}
+
+.modal-input-privat:focus+.modal-label-privat span {
+    border-color: var(--primary-brand);
 }
